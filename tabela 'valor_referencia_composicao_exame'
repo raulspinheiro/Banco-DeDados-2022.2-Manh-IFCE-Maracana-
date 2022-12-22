@@ -1,4 +1,4 @@
-CREATE TABLE valor_referencia_composicao (
+CREATE TABLE valor_referencia_composicao_exame (
   id INTEGER PRIMARY KEY,
   valor_minimo VARCHAR(45),
   valor_maximo VARCHAR(45),
@@ -8,7 +8,7 @@ CREATE TABLE valor_referencia_composicao (
   FOREIGN KEY (unidade_medida_id) REFERENCES unidade_medida(id)
 );
 
-//Esta query cria uma tabela com cinco colunas:
+//Esta query cria uma tabela de nome 'valor_referencia_composicao_exame' com cinco colunas:
 
 "id" é uma coluna inteira e é definida como a chave primária da tabela.
 "valor_minimo" e "valor_maximo" são colunas do tipo VARCHAR com comprimento máximo de 45 caracteres.
