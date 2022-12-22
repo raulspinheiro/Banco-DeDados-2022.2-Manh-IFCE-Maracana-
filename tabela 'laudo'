@@ -1,11 +1,4 @@
-CREATE TABLE laudo (
-  id INTEGER PRIMARY KEY,
-  assinatura_digital VARCHAR(45),
-  dt_resultado VARCHAR(45),
-  codigo VARCHAR(45),
-  solicitacao_exame INTEGER,
-  FOREIGN KEY (solicitacao_exame) REFERENCES solicitacao_exame(id)
-);
+
 
 //Esta query cria uma tabela com o nome 'laudo' com cinco colunas:
 
