@@ -1,0 +1,11 @@
+CREATE TABLE tipo_exame (
+   id INTEGER PRIMARY KEY,
+   descricao VARCHAR(45),
+   observacao VARCHAR(45)
+);
+
+//Para criar uma tabela chamada "tipo_exame" com as colunas "id", "descricao" e "observacao".
+A palavra-chave PRIMARY KEY especifica que a coluna "id" é a chave primária da tabela,
+o que significa que cada linha na tabela deve ter um valor único para essa coluna.
+A palavra-chave VARCHAR especifica que as colunas "descricao" e "observacao" são do
+tipo string com um tamanho máximo de 45 caracteres.
