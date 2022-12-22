@@ -1,1 +1,9 @@
-oi
+CREATE TABLE sigla_formacao (
+  id INTEGER PRIMARY KEY,
+  sigla VARCHAR(45)
+);
+
+//Essa query cria uma tabela chamada sigla_formacao
+com duas colunas: id e sigla.
+A coluna id é definida como chave primária e é do tipo inteiro,
+enquanto a coluna sigla é do tipo VARCHAR com tamanho máximo de 45 caracteres.
