@@ -1,0 +1,12 @@
+CREATE TABLE medico_has_especialidade (
+    medico_id INTEGER,
+    especialidade_id INTEGER,
+    FOREIGN KEY (medico_id) REFERENCES medicos(id),
+    FOREIGN KEY (especialidade_id) REFERENCES especialidades(id)
+);
+
+//Essa query cria uma tabela com duas colunas: 'medico_id' e 'especialidade_id',
+ambas do tipo inteiro. As duas colunas são definidas como chaves estrangeiras,
+o que significa que elas se referem a colunas em outras tabelas.
+A coluna 'medico_id' se refere à coluna 'id' da tabela 'medicos',
+enquanto a coluna 'especialidade_id' se refere à coluna 'id' da tabela 'especialidades'.
