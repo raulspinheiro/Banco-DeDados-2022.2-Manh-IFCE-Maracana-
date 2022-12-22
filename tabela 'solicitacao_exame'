@@ -10,75 +10,11 @@ CREATE TABLE solicitacao_exame (
   FOREIGN KEY (exame_id) REFERENCES exame(id)
 );
 
-//
-Criar tabela SQL com chaves
-
-
-Raul S Pinheiro
-Exemplo de query em SQL para criar uma tabela de nome 'valor_referencia_composicao' com uma coluna chave primária nome 'id' tipo inteiro, com outra coluna nome 'valor_minimo' tipo VARCHAR (45), com outra coluna nome 'valor_maximo' tipo VARCHAR (45), com outra coluna nome 'limitador_minimo' tipo VARCHAR (45), com outra coluna nome 'limitador_maximo' tipo VARCHAR (45) e uma outra coluna chave estrangeira nome 'unidade_medida_id' tipo inteiro .
-
-A seguinte query pode ser usada para criar a tabela "valor_referencia_composicao" com as colunas especificadas:
-
-Copy code
-CREATE TABLE valor_referencia_composicao (
-  id INTEGER PRIMARY KEY,
-  valor_minimo VARCHAR(45),
-  valor_maximo VARCHAR(45),
-  limitador_minimo VARCHAR(45),
-  limitador_maximo VARCHAR(45),
-  unidade_medida_id INTEGER,
-  FOREIGN KEY (unidade_medida_id) REFERENCES unidade_medida(id)
-);
-Esta query cria uma tabela com cinco colunas:
-
-"id" é uma coluna inteira e é definida como a chave primária da tabela.
-"valor_minimo" e "valor_maximo" são colunas do tipo VARCHAR com comprimento máximo de 45 caracteres.
-"limitador_minimo" e "limitador_maximo" são colunas do tipo VARCHAR com comprimento máximo de 45 caracteres.
-"unidade_medida_id" é uma coluna inteira e é definida como uma chave estrangeira que se refere à coluna "id" da tabela "unidade_medida".
-
-
-
-Raul S Pinheiro
-Exemplo de query em SQL para criar uma tabela de nome 'composicao' com uma coluna chave primária nome 'id' tipo inteiro, outra coluna chave estrangeira nome 'exame_id' tipo inteiro, outra coluna chave estrangeira nome 'composicao_exame_id' tipo inteiro e uma outra coluna chave estrangeira nome 'valor_referencia_composicao_exame' tipo inteiro .
-
-A seguinte query pode ser usada para criar a tabela "composicao" com as colunas especificadas:
-
-Copy code
-CREATE TABLE composicao (
-  id INTEGER PRIMARY KEY,
-  exame_id INTEGER,
-  composicao_exame_id INTEGER,
-  valor_referencia_composicao_exame INTEGER,
-  FOREIGN KEY (exame_id) REFERENCES exame(id),
-  FOREIGN KEY (composicao_exame_id) REFERENCES composicao_exame(id),
-  FOREIGN KEY (valor_referencia_composicao_exame) REFERENCES valor_referencia_composicao(id)
-);
-Esta query cria uma tabela com quatro colunas:
-
-"id" é uma coluna inteira e é definida como a chave primária da tabela.
-"exame_id", "composicao_exame_id" e "valor_referencia_composicao_exame" são colunas inteiras e são definidas como chaves estrangeiras que se referem, respectivamente, às colunas "id" das tabelas "exame", "composicao_exame" e "valor_referencia_composicao".
-
-
-
-Raul S Pinheiro
-Exemplo de query em SQL para criar uma tabela de nome 'solicitacao_exame' com uma coluna chave primária nome 'id' tipo inteiro, outra coluna nome 'nm_prescrito' tipo VARCHAR(45), outra coluna chave estrangeira nome 'consulta_medica_id' tipo inteiro, outra coluna nome 'dt_solicitacao' tipo TIMESTAMP, outra coluna chave estrangeira nome 'habilitacao_exame_id' tipo inteiro e uma outra coluna chave estrangeira nome 'exame_id' tipo inteiro .
-
-A seguinte query pode ser usada para criar a tabela "solicitacao_exame" com as colunas especificadas:
-
-Copy code
-CREATE TABLE solicitacao_exame (
-  id INTEGER PRIMARY KEY,
-  nm_prescrito VARCHAR(45),
-  consulta_medica_id INTEGER,
-  dt_solicitacao TIMESTAMP,
-  habilitacao_exame_id INTEGER,
-  exame_id INTEGER,
-  FOREI
-Esta query cria uma tabela com seis colunas:
+//Esta query cria uma tabela com o nome 'solicitacao_exame' com seis colunas:
 
 "id" é uma coluna inteira e é definida como a chave primária da tabela.
 "nm_prescrito" é uma coluna do tipo VARCHAR com comprimento máximo de 45 caracteres.
 "consulta_medica_id", "habilitacao_exame_id" e "exame_id" são colunas inteiras e são definidas como chaves estrangeiras que se referem, respectivamente, às colunas "id" das tabelas "consulta_medica", "habilitacao_exame" e "exame".
-"dt_solicitacao" é uma coluna do tipo TIMESTAMP.
+"dt_solicitacao" é uma coluna do tipo TIMESTAMP que armazena tanto data quanto hora.
 
 
