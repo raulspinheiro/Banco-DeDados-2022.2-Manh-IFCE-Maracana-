@@ -1,0 +1,12 @@
+CREATE TABLE composicao_exame (
+  id INT PRIMARY KEY,
+  descricao VARCHAR(45),
+  unidade_medida_id INT,
+  FOREIGN KEY (unidade_medida_id) REFERENCES unidade_medida (id)
+);
+
+//Criará uma tabela com três colunas: "id", "descricao" e "unidade_medida_id".
+A coluna "id" será a chave primária da tabela e será do tipo inteiro.
+A coluna "descricao" será do tipo VARCHAR (45) e a coluna "unidade_medida_id"
+será do tipo inteiro e será uma chave estrangeira que se refere à coluna "id"
+da tabela "unidade_medida" estabelecendo uma restrição de referência.
