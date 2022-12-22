@@ -1,1 +1,13 @@
-teste
+CREATE TABLE responsavel_tecnico_has_laboratorio (
+  responsavel_tecnico_id INTEGER,
+  laboratorio_id INTEGER,
+  FOREIGN KEY (responsavel_tecnico_id) REFERENCES responsavel_tecnico (id),
+  FOREIGN KEY (laboratorio_id) REFERENCES laboratorio (id)
+);
+
+//Essa query cria uma tabela chamada responsavel_tecnico_has_laboratorio
+com duas colunas: responsavel_tecnico_id e laboratorio_id.
+Ambas são do tipo inteiro e são definidas como chaves estrangeiras,
+ou seja, elas se relacionam com outras tabelas
+(responsavel_tecnico e laboratorio, respectivamente) e só podem conter
+valores que existem nessas tabelas.
