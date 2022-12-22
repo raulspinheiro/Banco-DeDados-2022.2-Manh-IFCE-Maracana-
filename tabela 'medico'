@@ -4,36 +4,9 @@ CREATE TABLE medico (
     nome VARCHAR(255)
 );
 
-//Criar tabela especialidade SQL
-
-
-Raul S Pinheiro
-Exemplo de query em SQL para criar uma tabela de nome 'especialidade' com uma coluna chave primária nome 'id' tipo inteiro, uma outra coluna nome 'descricao' tipo VARCHAR (255), uma outra coluna nome 'observacao' VARCHAR (255) .
-
-A seguinte query em SQL pode ser usada para criar uma tabela chamada "especialidade" com as colunas "id", "descricao" e "observacao":
-
-Copy code
-CREATE TABLE especialidade (
-    id INTEGER PRIMARY KEY,
-    descricao VARCHAR(255),
-    observacao VARCHAR(255)
-);
-O comando CREATE TABLE é usado para criar uma nova tabela no banco de dados. A lista de colunas é especificada entre parênteses, seguida pelos tipos de dados das colunas. A coluna "id" é definida como a chave primária da tabela, o que significa que ela é única e não pode ser nula. As colunas "descricao" e "observacao" são do tipo VARCHAR, o que significa que são strings de tamanho variável até o limite especificado (255 caracteres, no caso).
-
-Espero que isso ajude! Qualquer dúvida adicional, não hesite em perguntar.
-
-
-
-
-Raul S Pinheiro
-Exemplo de query em SQL para criar uma tabela de nome 'medico' com uma coluna chave primária nome 'id' tipo inteiro, uma outra coluna nome 'crm' tipo VARCHAR (45), uma outra coluna nome 'nome' tipo VARCHAR (255) .
-
-A seguinte query em SQL pode ser usada para criar uma tabela chamada "medico" com as colunas "id", "crm" e "nome":
-
-Copy code
-CREATE TABLE medico (
-    id INTEGER PRIMARY KEY,
-    crm VARCHAR(45),
-    nome VARCHAR(255)
-);
-O comando CREATE TABLE é usado para criar uma nova tabela no banco de dados. A lista de colunas é especificada entre parênteses, seguida pelos tipos de dados das colunas. A coluna "id" é definida como a chave primária da tabela, o que significa que ela é única e não pode ser nula. As colunas "crm" e "nome" são do tipo VARCHAR, o que significa que são strings de tamanho variável até o limite especificado (45 caracteres para "crm" e 255 caracteres para "nome", no caso).
+//O comando CREATE TABLE é usado para criar uma nova tabela no banco de dados.
+A lista de colunas é especificada entre parênteses, seguida pelos tipos de dados das colunas.
+A coluna "id" é definida como a chave primária da tabela, o que significa que ela é única
+e não pode ser nula. As colunas "crm" e "nome" são do tipo VARCHAR, o que significa que
+são strings de tamanho variável até o limite especificado (45 caracteres para "crm"
+e 255 caracteres para "nome", no caso).
