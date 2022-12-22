@@ -1,0 +1,12 @@
+CREATE TABLE especialidade (
+    id INTEGER PRIMARY KEY,
+    descricao VARCHAR(255),
+    observacao VARCHAR(255)
+);
+
+//O comando CREATE TABLE é usado para criar uma nova tabela
+no banco de dados. A lista de colunas é especificada entre parênteses, seguida
+pelos tipos de dados das colunas. A coluna "id" é definida como a chave primária da tabela,
+o que significa que ela é única e não pode ser nula. As colunas "descricao" e "observacao"
+são do tipo VARCHAR, o que significa que são strings de tamanho variável até o limite especificado
+(255 caracteres, no caso).
