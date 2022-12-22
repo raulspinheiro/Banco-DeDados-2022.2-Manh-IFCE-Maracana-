@@ -1,0 +1,16 @@
+CREATE TABLE resultado_exame (
+  id INTEGER PRIMARY KEY,
+  dt_exame TIMESTAMP,
+  valor VARCHAR(45),
+  composicao_id INTEGER,
+  laudo_id INTEGER,
+  FOREIGN KEY (composicao_id) REFERENCES composicao(id),
+  FOREIGN KEY (laudo_id) REFERENCES laudo(id)
+);
+
+//Esta query cria uma tabela com cinco colunas:
+
+"id" é uma coluna inteira e é definida como a chave primária da tabela.
+"dt_exame" é uma coluna do tipo TIMESTAMP.
+"valor" é uma coluna do tipo VARCHAR com comprimento máximo de 45 caracteres.
+"composicao_id" e "laudo_id" são colunas inteiras e são definidas como chaves estrangeiras que se referem, respectivamente, às colunas "id" das tabelas "composicao" e "laudo".
