@@ -1,0 +1,17 @@
+CREATE TABLE habilitacao_exame (
+   id INTEGER PRIMARY KEY,
+   observacao VARCHAR(45),
+   custo BIGINT,
+   laboratorio_id INTEGER,
+   tipo_exame_id INTEGER,
+   FOREIGN KEY (laboratorio_id) REFERENCES laboratorio(id),
+   FOREIGN KEY (tipo_exame_id) REFERENCES tipo_exame(id)
+);
+
+//Para criar uma tabela chamada "habilitacao_exame" com as colunas "id", "observacao", "custo", "laboratorio_id" e "tipo_exame_id".
+A palavra-chave PRIMARY KEY especifica que a coluna "id" é a chave primária da tabela, o que significa que cada linha na tabela
+deve ter um valor único para essa coluna. A palavra-chave BIGINT especifica que a coluna "custo" é do tipo inteiro grande.
+As colunas "laboratorio_id" e "tipo_exame_id" são do tipo inteiro e são chaves estrangeiras que se referem a chaves primárias
+em outras tabelas. A palavra-chave FOREIGN KEY especifica que essas colunas são chaves estrangeiras e a cláusula
+REFERENCES especifica qual tabela e qual coluna elas se referem.
+
