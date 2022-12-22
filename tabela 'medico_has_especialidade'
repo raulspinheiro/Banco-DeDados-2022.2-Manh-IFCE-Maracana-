@@ -1,8 +1,8 @@
 CREATE TABLE medico_has_especialidade (
     medico_id INTEGER,
     especialidade_id INTEGER,
-    FOREIGN KEY (medico_id) REFERENCES medicos(id),
-    FOREIGN KEY (especialidade_id) REFERENCES especialidades(id)
+    FOREIGN KEY (medico_id) REFERENCES medico(id),
+    FOREIGN KEY (especialidade_id) REFERENCES especialidade(id)
 );
 
 //Essa query cria uma tabela com duas colunas: 'medico_id' e 'especialidade_id',
