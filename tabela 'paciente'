@@ -1,0 +1,9 @@
+CREATE TABLE paciente (
+  id INT PRIMARY KEY,
+  nome VARCHAR(45),
+  dt_nascimento DATE
+);
+
+//Isso criará uma tabela com três colunas: "id", "nome" e "dt_nascimento".
+A coluna "id" será a chave primária da tabela e será do tipo inteiro.
+A coluna "nome" será do tipo VARCHAR (45) e a coluna "dt_nascimento" será do tipo DATE.
