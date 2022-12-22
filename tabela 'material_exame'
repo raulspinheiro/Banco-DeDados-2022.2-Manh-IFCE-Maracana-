@@ -1,0 +1,12 @@
+CREATE TABLE material_exame (
+   id INTEGER PRIMARY KEY,
+   material VARCHAR(45) NOT NULL,
+   observacao VARCHAR(45)
+);
+
+//Para criar uma tabela chamada "material_exame" com as colunas "id", "material" e "observacao".
+A palavra-chave PRIMARY KEY especifica que a coluna "id" é a chave primária da tabela, o que
+significa que cada linha na tabela deve ter um valor único para essa coluna. A palavra-chave
+VARCHAR especifica que as colunas "material" e "observacao" são do tipo string com um tamanho
+máximo de 45 caracteres. A palavra-chave NOT NULL especifica que a coluna "material" não pode
+ter um valor nulo. Isso significa que cada linha na tabela deve ter um valor para essa coluna.
