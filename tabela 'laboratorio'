@@ -1,0 +1,14 @@
+CREATE TABLE laboratorio (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  descricao VARCHAR(255) NOT NULL,
+  CNES VARCHAR(45) NOT NULL,
+  CNPJ VARCHAR(45) NOT NULL,
+  CRBM VARCHAR(45) NOT NULL,
+  nome_fantasia VARCHAR(255)
+);
+
+//A coluna "id" é definida como uma chave primária, o que significa que cada linha na tabela
+terá um valor único e não nulo para essa coluna. As outras colunas são do tipo VARCHAR, ou de 
+45 ou de 255, o que significa que armazenarão cadeias de caracteres de até 45 o
+ou 255 caracteres de comprimento, e a opção "NOT NULL" garante que não serão permitido
+inserir linhas com valores nulos para essas colunas, com exeção a coluna 'nome_fantasia'.
