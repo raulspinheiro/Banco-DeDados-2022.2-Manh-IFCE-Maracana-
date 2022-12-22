@@ -5,22 +5,6 @@ CREATE TABLE contato (
   FOREIGN KEY (laboratorio_id) REFERENCES laboratorio(id)
 );
 
-//riar tabela SQL com colunas chaves e estrangeiras
-
-
-Raul S Pinheiro
-Exemplo de query em SQL para criar uma tabela de nome 'contato' com uma coluna chave primária nome 'id' tipo inteiro, uma outra coluna nome 'telefone' tipo VARCHAR (45) e uma outra coluna chave estrangeira nome "laboratorio_id' tipo inteiro.
-
-Para criar uma tabela com essas características em um banco de dados SQL, você pode usar o seguinte comando:
-
-Copy code
-CREATE TABLE contato (
-  id INTEGER PRIMARY KEY,
-  telefone VARCHAR(45),
-  laboratorio_id INTEGER,
-  FOREIGN KEY (laboratorio_id) REFERENCES laboratorio(id)
-);
-
 // A primeira linha cria uma tabela chamada "contato". As linhas seguintes especificam
 as colunas da tabela, incluindo o nome da coluna, o tipo de dados e outras restrições.
 A coluna "id" é definida como a chave primária da tabela, o que significa que é única e
