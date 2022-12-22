@@ -1,1 +1,8 @@
+CREATE TABLE unidade_medida (
+    id INTEGER PRIMARY KEY,
+    descricao VARCHAR(45)
+);
 
+//Essa query cria uma tabela com duas colunas: 'id' e 'descricao'.
+A coluna 'id' é definida como a chave primária da tabela e é do tipo inteiro, do tipo não nulo e único.
+A coluna descricao é do tipo VARCHAR (45), o que significa que ela pode armazenar até 45 caracteres.
