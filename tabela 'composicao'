@@ -1,0 +1,16 @@
+CREATE TABLE composicao (
+  id INTEGER PRIMARY KEY,
+  exame_id INTEGER,
+  composicao_exame_id INTEGER,
+  valor_referencia_composicao_exame_id INTEGER,
+  FOREIGN KEY (exame_id) REFERENCES exame(id),
+  FOREIGN KEY (composicao_exame_id) REFERENCES composicao_exame(id),
+  FOREIGN KEY (valor_referencia_composicao_exame_id) REFERENCES valor_referencia_composicao_exame(id)
+);
+
+//Esta query cria uma tabela com nome 'composicao' com quatro colunas:
+
+"id" é uma coluna inteira e é definida como a chave primária da tabela.
+"exame_id", "composicao_exame_id" e "valor_referencia_composicao_exame"
+são colunas inteiras e são definidas como chaves estrangeiras que se referem,
+respectivamente, às colunas "id" das tabelas "exame", "composicao_exame" e "valor_referencia_composicao_exame".
