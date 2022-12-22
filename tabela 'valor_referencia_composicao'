@@ -1,0 +1,16 @@
+CREATE TABLE valor_referencia_composicao (
+  id INTEGER PRIMARY KEY,
+  valor_minimo VARCHAR(45),
+  valor_maximo VARCHAR(45),
+  limitador_minimo VARCHAR(45),
+  limitador_maximo VARCHAR(45),
+  unidade_medida_id INTEGER,
+  FOREIGN KEY (unidade_medida_id) REFERENCES unidade_medida(id)
+);
+
+//Esta query cria uma tabela com cinco colunas:
+
+"id" é uma coluna inteira e é definida como a chave primária da tabela.
+"valor_minimo" e "valor_maximo" são colunas do tipo VARCHAR com comprimento máximo de 45 caracteres.
+"limitador_minimo" e "limitador_maximo" são colunas do tipo VARCHAR com comprimento máximo de 45 caracteres.
+"unidade_medida_id" é uma coluna inteira e é definida como uma chave estrangeira que se refere à coluna "id" da tabela "unidade_medida".
