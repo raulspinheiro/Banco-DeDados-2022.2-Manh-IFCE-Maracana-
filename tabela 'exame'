@@ -1,0 +1,18 @@
+CREATE TABLE exame (
+   id INTEGER PRIMARY KEY,
+   tipo_exame_id INTEGER,
+   descricao VARCHAR(45),
+   material_exame_id INTEGER,
+   metodo VARCHAR(255),
+   FOREIGN KEY (tipo_exame_id) REFERENCES tipo_exame(id),
+   FOREIGN KEY (material_exame_id) REFERENCES material_exame(id)
+);
+
+//Para criar uma tabela chamada "exame" com as colunas "id", "tipo_exame_id", "descricao", "material_exame_id" e "metodo".
+A palavra-chave PRIMARY KEY especifica que a coluna "id" é a chave primária da tabela, o que significa que
+cada linha na tabela deve ter um valor único para essa coluna. A palavra-chave VARCHAR especifica que a coluna "descricao"
+é do tipo string com um tamanho máximo de 45 caracteres, enquanto a palavra-chave VARCHAR especifica que a coluna "metodo"
+é do tipo string com um tamanho máximo de 255 caracteres. As colunas "tipo_exame_id" e "material_exame_id" são do tipo inteiro
+e são chaves estrangeiras que se referem a chaves primárias em outras tabelas.
+A palavra-chave FOREIGN KEY especifica que essas colunas são chaves estrangeiras
+e a cláusula REFERENCES especifica qual tabela e qual coluna elas se referem.
