@@ -1,0 +1,14 @@
+CREATE TABLE laudo (
+  id INTEGER PRIMARY KEY,
+  assinatura_digital VARCHAR(45),
+  dt_resultado VARCHAR(45),
+  codigo VARCHAR(45),
+  solicitacao_exame INTEGER,
+  FOREIGN KEY (solicitacao_exame) REFERENCES solicitacao_exame(id)
+);
+
+//Esta query cria uma tabela com o nome 'laudo' com cinco colunas:
+
+"id" é uma coluna inteira e é definida como a chave primária da tabela.
+"assinatura_digital", "dt_resultado" e "codigo" são colunas do tipo VARCHAR com comprimento máximo de 45 caracteres.
+"solicitacao_exame" é uma coluna inteira e é definida como uma chave estrangeira que se refere à coluna "id" da tabela "solicitacao_exame".
