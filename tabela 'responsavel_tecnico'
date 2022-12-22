@@ -1,0 +1,18 @@
+CREATE TABLE responsavel_tecnico (
+   id INTEGER PRIMARY KEY,
+   nome VARCHAR(45),
+   conselho VARCHAR(45),
+   formacao VARCHAR(45),
+   sigla_formacao VARCHAR(45),
+   sigla_formacao_id INTEGER,
+   FOREIGN KEY (sigla_formacao_id) REFERENCES sigla_formacao(id)
+);
+
+//Esta query cria uma tabela chamada "responsavel_tecnico"
+com uma coluna "id" do tipo inteiro e definida como chave primária,
+uma coluna "nome" do tipo VARCHAR(45),
+uma coluna "conselho" do tipo VARCHAR(45),
+uma coluna "formacao" do tipo VARCHAR(45),
+uma coluna "sigla_formacao" do tipo VARCHAR(45)
+e uma coluna "sigla_formacao_id" do tipo inteiro definida como chave estrangeira
+que se refere à coluna "id" da tabela 'sigla_formacao' .
