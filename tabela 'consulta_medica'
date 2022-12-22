@@ -1,0 +1,18 @@
+CREATE TABLE consulta_medica (
+    id INTEGER PRIMARY KEY,
+    dt_consulta DATETIME NOT NULL,
+    medico_id INTEGER,
+    paciente_id INTEGER,
+    nm_atendimento VARCHAR(45),
+    FOREIGN KEY (medico_id) REFERENCES medico(id),
+    FOREIGN KEY (paciente_id) REFERENCES paciente(id)
+);
+
+//O comando CREATE TABLE é usado para criar uma nova tabela no banco de dados.
+A lista de colunas é especificada entre parênteses, seguida pelos tipos de dados das colunas.
+A coluna "id" é definida como a chave primária da tabela, o que significa que ela é única e
+não pode ser nula. A coluna "dt_consulta" é do tipo DATETIME e é definida como não nula, o que
+significa que ela não pode ser vazia. As colunas "medico_id" e "paciente_id" são do tipo INTEGER
+e são definidas como chaves estrangeiras, o que significa que elas se referem aos IDs das tabelas
+"medico" e "paciente", respectivamente. A coluna "nm_atendimento" é do tipo VARCHAR,
+o que significa que é uma string de tamanho variável até o limite especificado (45 caracteres, no caso).
