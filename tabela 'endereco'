@@ -10,69 +10,6 @@ CREATE TABLE endereco (
   FOREIGN KEY (laboratorio_id) REFERENCES laboratorio(id)
 );
 
-//riar tabela SQL com colunas chaves e estrangeiras
-
-
-Raul S Pinheiro
-Exemplo de query em SQL para criar uma tabela de nome 'contato' com uma coluna chave primária nome 'id' tipo inteiro, uma outra coluna nome 'telefone' tipo VARCHAR (45) e uma outra coluna chave estrangeira nome "laboratorio_id' tipo inteiro.
-
-Para criar uma tabela com essas características em um banco de dados SQL, você pode usar o seguinte comando:
-
-Copy code
-CREATE TABLE contato (
-  id INTEGER PRIMARY KEY,
-  telefone VARCHAR(45),
-  laboratorio_id INTEGER,
-  FOREIGN KEY (laboratorio_id) REFERENCES laboratorio(id)
-);
-A primeira linha cria uma tabela chamada "contato". As linhas seguintes especificam as colunas da tabela, incluindo o nome da coluna, o tipo de dados e outras restrições.
-
-A coluna "id" é definida como a chave primária da tabela, o que significa que é única e não pode ser nula. A coluna "telefone" é do tipo VARCHAR, o que significa que pode armazenar uma sequência de caracteres de até 45 caracteres. A coluna "laboratorio_id" é um tipo INTEGER e é definida como uma chave estrangeira, o que significa que ela se refere ao id da tabela "laboratorio". Isso cria uma restrição de integridade referencial, o que significa que o valor da coluna "laboratorio_id" deve corresponder a um id existente na tabela "laboratorio".
-
-
-
-
-Raul S Pinheiro
-Exemplo de query em SQL para criar uma tabela de nome 'endereco' com uma coluna nome 'rua' tipo VARCHAR (255) não nulo, uma outra coluna nome 'numero' tipo VARCHAR (45) não nulo, uma outra coluna nome 'complemento' tipo VARCHAR (45), uma outra coluna nome 'bairro' tipo VARCHAR (255) não nulo, uma outra coluna nome 'CEP' tipo VARCHAR (45) não nulo, uma outra coluna nome 'cidade' tipo VARCHAR (255) não nulo e uma outra coluna chave estrangeira nome 'laboratorio_id' tipo inteiro .
-
-Para criar uma tabela com essas características em um banco de dados SQL, você pode usar o seguinte comando:
-
-Copy code
-CREATE TABLE endereco (
-  rua VARCHAR(255) NOT NULL,
-  numero VARCHAR(45) NOT NULL,
-  complemento VARCHAR(45),
-  bairro VARCHAR(255) NOT NULL,
-  CEP VARCHAR(45) NOT NULL,
-  cidade VARCHAR(255) NOT NULL,
-  laboratorio_id INTEGER,
-  FOREIGN KEY (laboratorio_id) REFERENCES laboratorio(id)
-);
-A primeira linha cria uma tabela chamada "endereco". As linhas seguintes especificam as colunas da tabela, incluindo o nome da coluna, o tipo de dados e outras restrições.
-
-As colunas "rua", "numero", "bairro", "CEP" e "cidade" são todas do tipo VARCHAR e são definidas como NOT NULL, o que significa que não podem armazenar valores nulos. A coluna "complemento" é do tipo VARCHAR, mas não é definida como NOT NULL, o que significa que pode armazenar valores nulos. A coluna "laboratorio_id" é um tipo INTEGER e é definida como uma chave estrangeira, o que significa que ela se refere ao id da tabela "laboratorio". Isso cria uma restrição de integridade referencial, o que significa que o valor da coluna "laboratorio_id" deve corresponder a um id existente na tabela "laboratorio".
-
-
-
-
-Raul S Pinheiro
-Exemplo de query em SQL para criar uma tabela de nome 'endereco' com uma coluna chave primária nome 'id' tipo inteiro, com uma outra coluna nome 'rua' tipo VARCHAR (255) não nulo, uma outra coluna nome 'numero' tipo VARCHAR (45) não nulo, uma outra coluna nome 'complemento' tipo VARCHAR (45), uma outra coluna nome 'bairro' tipo VARCHAR (255) não nulo, uma outra coluna nome 'CEP' tipo VARCHAR (45) não nulo, uma outra coluna nome 'cidade' tipo VARCHAR (255) não nulo e uma outra coluna chave estrangeira nome 'laboratorio_id' tipo inteiro .
-
-Para criar uma tabela com essas características em um banco de dados SQL, você pode usar o seguinte comando:
-
-Copy code
-CREATE TABLE endereco (
-  id INTEGER PRIMARY KEY,
-  rua VARCHAR(255) NOT NULL,
-  numero VARCHAR(45) NOT NULL,
-  complemento VARCHAR(45),
-  bairro VARCHAR(255) NOT NULL,
-  CEP VARCHAR(45) NOT NULL,
-  cidade VARCHAR(255) NOT NULL,
-  laboratorio_id INTEGER,
-  FOREIGN KEY (laboratorio_id) REFERENCES laboratorio(id)
-);
-
 //A primeira linha cria uma tabela chamada "endereco".
 As linhas seguintes especificam as colunas da tabela, incluindo o nome da coluna,
 o tipo de dados e outras restrições.
